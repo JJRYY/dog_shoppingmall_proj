@@ -19,7 +19,6 @@ public class DogDAOImpl implements DogDAO {
 	}
 
 	private DogDAOImpl() {
-		
 	}
 
 	@Override
