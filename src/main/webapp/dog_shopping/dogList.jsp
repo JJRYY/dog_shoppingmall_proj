@@ -17,7 +17,7 @@
 				<tr>
 					<c:forEach var="dog" items="${dogList }" varStatus="status">
 					<td>
-						<a href="dogView.dog?id=${dog.id }">
+						<a href="dogView.do?id=${dog.id }">
 							<img src="images/${dog.image }" id="productImage">
 						</a>
 						상품명: [${dog.kind }]<br>
