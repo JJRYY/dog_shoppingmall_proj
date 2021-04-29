@@ -12,7 +12,8 @@
 	<section id="listForm">
 		<c:if test="${dogList != null }">
 			<h2>개 상품 목록 </h2>
-			<a href="dogRegistForm.do">개 상품 등록</a>
+			<a href="dogRegistForm.do">[개 상품 등록]</a>
+			<a href="dogCartList.do">[장바구니 보기]</a>
 			<table>
 				<tr>
 					<c:forEach var="dog" items="${dogList }" varStatus="status">
