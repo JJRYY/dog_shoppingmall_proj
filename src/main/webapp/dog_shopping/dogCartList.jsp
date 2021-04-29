@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>장바구니</title>
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/dogCartList.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 	function checkAll(theForm){
 		if(theForm.remove.length == undefined){
