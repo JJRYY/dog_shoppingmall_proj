@@ -28,6 +28,7 @@ public class DogRegistAction implements Action {
 		
 		ServletContext context = request.getServletContext();
 		realFolder = context.getRealPath(saveFolder);
+		System.out.println("path >> " + realFolder);
 		
 		MultipartRequest multi = null;
 		try {
