@@ -10,36 +10,20 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 	function checkAll(theForm){
-		if(theForm.remove.length == undefined) {
+		if(theForm.remove.length == undefined){
 			theForm.remove.checked = theForm.allCheck.checked;
 		} else {
-			for (var i = 0; i < theForm.remove.length; i++){
+			for(var i=0; i<theForm.remove.length; i++){
 				theForm.remove[i].checked = theForm.allCheck.checked;
 			}
 		}
 	}
-
-	$(function(){
-		/* $("#allCheck").click(function checkAll(){
-			if(form.remove.length == undefined){
-				form.remove.checked = form.allCheck.checked;
-			} else {
-				for(var i = 0; i < form.remove.length; i++){
-					form.remove[i].checked = form.allCheck.checked;
-				}
-			}
-		}); */
-		
-		$('.downClick').click(function(){
-			kind = $(this).data("kind");
-			qty = $(this).data("qty");
-			
-			/* alert("kind" + kind + " qty = " + qty); */
-			if (qty != 1){
-				location.href="dogCartQtyDown.do?kind=" + encodeURIComponent(kind);
-			}
-		});
-	});
+	
+	function checkQty(kind, qty) {
+		if(qty != 1){
+			locatin.href="dogCartQtyDown.do?kind="+kind;
+		}
+	}
 </script>
 </head>
 <body>
@@ -162,7 +146,7 @@
 							<img src="images/up.jpg" id="upImage" border=0 />
 						</a><br>
 						${cart.qty }<br>
-						<a href="#" class="downClick" data-kind="${cart.kind }" data-qty="${cart.qty }">
+						<a href="javascript:checkQty(`${cart.kind }`, ${cart.qty })">
 							<img src="images/down.jpg" id="downImage" border=0 />
 						</a>
 					</td>
